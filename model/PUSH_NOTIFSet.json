@@ -1,0 +1,74 @@
+{
+	"PUSH_NOTIFSet" :
+[{
+	"Createdat": "2017-04-21T12:20:29",
+	"SystemId": "SystemId 1",
+	"Userid": "Userid 1",
+	"TaskId": "TaskId 1",
+	"WiId": "WiId 1",
+	"Identifier": "Identifier 1",
+	"NotifTxt": "NotifTxt 1-Awaiting Approval",
+	"Appname": "Appname 1",
+	"ReadFlg": "ReadFlg 1",
+	"__metadata": {
+		"uri": "PUSH_NOTIFSet(SystemId='SystemId%201',Userid='Userid%201',WiId='WiId%201')",
+		"type": "Z_PUSH_NTF_SRV.PUSH_NOTIF"
+	}
+}, {
+	"Createdat": "2017-04-21T12:20:29",
+	"SystemId": "SystemId 2",
+	"Userid": "Userid 2",
+	"TaskId": "TaskId 2",
+	"WiId": "WiId 2",
+	"Identifier": "Identifier 2",
+	"NotifTxt": "NotifTxt 2--Awaiting Approval",
+	"Appname": "Appname 2",
+	"ReadFlg": "ReadFlg 2",
+	"__metadata": {
+		"uri": "PUSH_NOTIFSet(SystemId='SystemId%202',Userid='Userid%202',WiId='WiId%202')",
+		"type": "Z_PUSH_NTF_SRV.PUSH_NOTIF"
+	}
+}, {
+	"Createdat": "2017-04-21T12:20:29",
+	"SystemId": "SystemId 3",
+	"Userid": "Userid 3",
+	"TaskId": "TaskId 3",
+	"WiId": "WiId 3",
+	"Identifier": "Identifier 3",
+	"NotifTxt": "NotifTxt 3--Awaiting Approval",
+	"Appname": "Appname 3",
+	"ReadFlg": "ReadFlg 3",
+	"__metadata": {
+		"uri": "PUSH_NOTIFSet(SystemId='SystemId%203',Userid='Userid%203',WiId='WiId%203')",
+		"type": "Z_PUSH_NTF_SRV.PUSH_NOTIF"
+	}
+}, {
+	"Createdat": "2017-04-21T12:20:29",
+	"SystemId": "SystemId 4",
+	"Userid": "Userid 4",
+	"TaskId": "TaskId 4",
+	"WiId": "WiId 4",
+	"Identifier": "Identifier 4",
+	"NotifTxt": "NotifTxt 4--Awaiting Approval",
+	"Appname": "Appname 4",
+	"ReadFlg": "ReadFlg 4",
+	"__metadata": {
+		"uri": "PUSH_NOTIFSet(SystemId='SystemId%204',Userid='Userid%204',WiId='WiId%204')",
+		"type": "Z_PUSH_NTF_SRV.PUSH_NOTIF"
+	}
+}, {
+	"Createdat": "2017-04-21T12:20:29",
+	"SystemId": "SystemId 5",
+	"Userid": "Userid 5",
+	"TaskId": "TaskId 5",
+	"WiId": "WiId 5",
+	"Identifier": "Identifier 5",
+	"NotifTxt": "NotifTxt 5--Awaiting Approval",
+	"Appname": "Appname 5",
+	"ReadFlg": "ReadFlg 5",
+	"__metadata": {
+		"uri": "PUSH_NOTIFSet(SystemId='SystemId%205',Userid='Userid%205',WiId='WiId%205')",
+		"type": "Z_PUSH_NTF_SRV.PUSH_NOTIF"
+	}
+}]
+}

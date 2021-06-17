@@ -1,0 +1,94 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 	xmlns:semantic="sap.m.semantic" controllerName="com.eric.ZManageNotiApp1.controller.Master">
+	<semantic:MasterPage id="View1"
+		title="{masterView>/title}"
+		navButtonPress="onNavBack"
+		showNavButton="true">
+		<semantic:subHeader>
+			<Bar id="headerBar">
+				<contentMiddle>
+					<SearchField
+						id="searchField"
+						showRefreshButton="{= !${device>/support/touch} }"
+						tooltip="{i18n>masterSearchTooltip}"
+						width="100%"
+						search="onSearch">
+					</SearchField>
+				</contentMiddle>
+			</Bar>
+		</semantic:subHeader>
+				<semantic:content>
+					<PullToRefresh
+				id="pullToRefresh"
+				visible="{device>/support/touch}"
+				refresh="onRefresh" />
+			<!-- For client side filtering add this to the items attribute: parameters: {operationMode: 'Client'}}" -->
+			<List
+				id="list1"
+				items="{
+					path: '/PUSH_NOTIFSet',
+					sorter: {
+						path: 'Createdat',
+						descending: true
+						},
+					filters : [{ path : 'ReadFlg', operator : 'EQ', value1 : ''}]
+				}"
+				busyIndicatorDelay="{masterView>/delay}"
+				noDataText="{masterView>/noDataText}"
+				mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
+				growing="true"
+				growingScrollToLoad="{= ${device>/system/phone} ? false : true}"
+				growingThreshold="20"
+				updateFinished="onUpdateFinished"
+				selectionChange="onSelectionChange">
+				
+				<!--	<List
+				id="list1"
+				items="{
+					path: '/PUSH_NOTIFSet',
+					sorter: {
+						path: 'Createdat',
+						descending: true
+						}
+				}"
+				busyIndicatorDelay="{masterView>/delay}"
+				noDataText="{masterView>/noDataText}"
+				mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
+				growing="true"
+				growingScrollToLoad="true"
+				updateFinished="onUpdateFinished"
+				selectionChange="onSelectionChange">-->
+				<infoToolbar>
+					<Toolbar
+						active="true"
+						id="filterBar"
+						visible="{masterView>/isFilterBarVisible}"
+						press="onOpenViewSettings">
+						<Title
+							id="filterBarLabel"
+							text="{masterView>/filterBarLabel}" />
+					</Toolbar>
+				</infoToolbar>
+				<items>
+			<!--		<ObjectListItem
+						type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}"
+						press="onselectionChange"
+						title="{NotifTxt}"
+						number="{Appname}"
+						numberUnit="{path: 'Createdat', type: 'sap.ui.model.type.DateTime',formatOptions: { style: 'medium', strictParsing: true, relative: true }}">
+					</ObjectListItem>-->
+						<ObjectListItem
+						type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}"
+						press="onSelectionChange"
+						title="{NotifTxt}"
+						>
+					</ObjectListItem>
+				</items>
+			</List>
+				</semantic:content>
+					<semantic:filter>
+		<semantic:FilterAction
+				id="filter"
+				press="onOpenViewSettings" />
+		</semantic:filter>
+	</semantic:MasterPage>
+</mvc:View>

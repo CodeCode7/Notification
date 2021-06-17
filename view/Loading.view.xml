@@ -1,0 +1,16 @@
+<mvc:View
+	controllerName="com.eric.ZManageNotiApp1.controller.BaseController"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+
+	<MessagePage
+		id="loadingPage"
+		title="{i18n>notAvailableViewTitle}"
+		text="{i18n>loadingMessage}"
+		icon="sap-icon://notification-2"
+		description="{i18n>loadingDescription}"
+		showNavButton="{device>/system/phone}"
+		navButtonPress="onNavBack">
+	</MessagePage>
+
+</mvc:View>

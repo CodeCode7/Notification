@@ -1,0 +1,34 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:semantic="sap.m.semantic"  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form" controllerName="com.eric.ZManageNotiApp1.controller.Detail"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <semantic:DetailPage id="View2"
+    navButtonPress="onNavBack"
+    showNavButton="{device>/system/phone}"
+    title="{i18n>detailTitle}"
+    busy="{detailView>/busy}"
+    busyIndicatorDelay="{detailView>/delay}">
+      <semantic:content>
+      <ObjectHeader
+        id="objectHeader"
+        title="{NotifTxt}">
+        <attributes>
+        <ObjectAttribute text="Recieved on : {path: 'Createdat', type: 'sap.ui.model.type.DateTime',formatOptions: { style: 'medium', strictParsing: true, relative: true }}" />
+        <ObjectAttribute text="Application Name: {
+						path: 'Appname',
+						formatter: '.formatter.appText'
+					}" />
+      
+        </attributes>
+      </ObjectHeader>
+
+      </semantic:content>
+
+    <semantic:customFooterContent>
+            <Button  id="openTask" icon="sap-icon://action" text="Open Task" press="onPressOpenTask" class="sapUiResponsiveContentPadding myCustomButton" busyIndicatorDelay="0" />
+           <!-- <Button  text="Test Dummy do not use" press="otest"/>-->
+        </semantic:customFooterContent>
+ 
+
+  </semantic:DetailPage>
+</mvc:View>

@@ -1,0 +1,15 @@
+<mvc:View
+	controllerName="com.eric.ZManageNotiApp1.controller.BaseController"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+
+	<MessagePage
+		id="Page"
+		title="{i18n>notAvailableViewTitle}"
+		text="{i18n>noObjectsAvailableText}"
+		icon="{sap-icon://receive-task}"
+		description=""
+		showNavButton="{device>/system/phone}"
+		navButtonPress="onNavBack">
+	</MessagePage>
+</mvc:View>
